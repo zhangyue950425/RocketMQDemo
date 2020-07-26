@@ -8,5 +8,14 @@
     <artifactId>RocketMQDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    
+    <properties>
+        <rocketmq.version>4.3.0</rocketmq.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>${rocketmq.version}</version>
+        </dependency>
+    </dependencies>
 </project>
