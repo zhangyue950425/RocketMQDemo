@@ -1,4 +1,4 @@
-package com.zhangyue.rocketmq.client.producer;
+package com.zhangyue.rocketmq.client.baseSimple.producer;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;
