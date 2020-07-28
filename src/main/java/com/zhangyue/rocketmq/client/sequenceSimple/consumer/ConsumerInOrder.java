@@ -7,7 +7,9 @@ import org.apache.rocketmq.client.consumer.listener.MessageListenerOrderly;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -44,5 +46,6 @@ public class ConsumerInOrder {
         });
         defaultMQPushConsumer.start();
         System.out.println("Consumer Started.");
+
     }
 }
