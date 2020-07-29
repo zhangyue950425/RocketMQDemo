@@ -35,6 +35,7 @@ public class Producer {
             Message message = new Message("TopicTest", tags[i % tags.length],
                     "KEY" + i, body.getBytes());
             SendResult sendResult = defaultMQProducer.send(message, new MessageQueueSelector() {
+                @Override
                 public MessageQueue select(List<MessageQueue> list, Message message, Object o) {
                     //根据订单id选择发送queue
                     Long id = (Long) o;

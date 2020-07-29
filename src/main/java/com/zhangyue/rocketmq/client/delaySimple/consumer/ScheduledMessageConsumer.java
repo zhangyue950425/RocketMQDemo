@@ -22,6 +22,7 @@ public class ScheduledMessageConsumer {
         defaultMQPushConsumer.subscribe("TopicTest", "*");
         //注册消息监听者
         defaultMQPushConsumer.registerMessageListener(new MessageListenerConcurrently() {
+            @Override
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
                 for (MessageExt messageExt : list) {
                     // Print approximate delay time period

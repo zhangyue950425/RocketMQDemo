@@ -29,6 +29,7 @@ public class ConsumerInOrder {
         defaultMQPushConsumer.subscribe("TopicTest", "TagA || TagC || TagD");
         defaultMQPushConsumer.registerMessageListener(new MessageListenerOrderly() {
             Random random = new Random();
+            @Override
             public ConsumeOrderlyStatus consumeMessage(List<MessageExt> list, ConsumeOrderlyContext consumeOrderlyContext) {
                 consumeOrderlyContext.setAutoCommit(true);
                 for (MessageExt messageExt : list) {
